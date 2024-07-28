@@ -19,6 +19,9 @@ const NavBar = () => {
           <li>
             <Link href="/courses">Courses</Link>
           </li>
+          <li>
+            <Link href="/dashboard">Dashboard</Link>
+          </li>
         </ul>
         <button>Login</button>
       </div>

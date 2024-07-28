@@ -5,17 +5,11 @@ import useSWR from "swr";
 
 export default function Home() {
   const fetcher = (...args) => fetch(...args).then((res) => res.json());
-  const {
-    data,
-    error,
-  } = useSWR("/api/getAllTodos", fetcher); // data={success,message,allTodos}
+  const { data, error } = useSWR("/api/getAllTodos", fetcher); // data={success,message,allTodos}
   if (error) return <div>failed to load</div>;
   if (!data) return <div>loading...</div>;
   return (
     <main>
-      <ul>
-        <li>কেমনে করে outlet এর কাজ করব?</li>
-      </ul>
       <section className="m-10 bg-cyan-100 p-10 text-center">
         <h1 className="text-center text-2xl font-bold underline">
           TODO<small className="text-xs">oooooo</small>S
